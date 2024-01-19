@@ -1,0 +1,80 @@
+@import "vars.sass"
+body
+  font-family: Roboto, Arial, Helvetica, sans-serif
+  font-style: normal
+  font-weight: 500
+  line-height: 120%
+.main
+  padding: 2rem 0
+.main__table-section
+  display: flex
+  flex-direction: row
+  gap: 2rem
+.main__table
+  width: 50vw
+  table-layout: fixed
+.main__container
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin: 0 1rem
+  gap: 2rem
+.about
+  display: -webkit-box
+  -webkit-line-clamp: 2
+  -webkit-box-orient: vertical
+  overflow: hidden
+  text-align: left
+.main__arrows
+  display: flex
+  align-items: center
+.main__arrow
+  width: 3rem
+.rotated-arrow
+  transform: rotate(180deg)
+td
+  text-align: center
+.settings__table-cols
+  display: none
+  flex-direction: column
+  row-gap: 0.5rem
+.settings__table-col
+  display: flex
+  gap: 0.5rem
+.settings
+  display: flex
+  flex-direction: column
+  row-gap: 0.5rem
+#firstName:checked ~ td
+  display: none
+.hidden
+  display: none
+.edit fieldset legend
+  display: flex
+  flex-direction: column
+  row-gap: 1rem
+  text-align: center
+.edit__form
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  gap: 1rem
+.edit__form input
+  border: 0.1rem solid black
+.edit__save
+  height: 2rem
+.main__edit
+  display: none
+.button
+  font-size: 1.25rem
+.visible
+  display: inline
+.settings__header
+  display: flex
+  flex-direction: row
+  align-items: center
+.settings__header img
+  width: 2rem
+.rotate-down
+  transform: rotate(90deg)

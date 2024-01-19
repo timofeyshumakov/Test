@@ -1,0 +1,60 @@
+doctype html
+html(lang="en")
+
+  head
+    meta(charset='UTF-8')
+    meta(name='format-detection' content="telephone=yes")
+    meta(name="robots" content="all")
+    meta(name="keywords" content="ключевые слова")
+    meta(name="description" content="Описание страницы сайта.")
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='icon' type='image/x-icon' href='../assets/img/logo.svg')
+    title Тестовое задание
+    link(href="https://fonts.googleapis.com/css?family=Roboto:400&display=swap" rel="stylesheet")
+    link(rel='stylesheet' href='assets/css/reset.css')
+    link(rel='stylesheet' href='assets/css/style.css')
+  body 
+  -var table_titles= ['Имя','Фамилия','Описание','Цвет глаз']
+  -var table_id= ['firstName','lastName','about','eyeColor']
+  -var i = 0;
+    .wrapper
+      main.main
+        .main__container
+          h1 Таблица
+          section.settings
+            .settings__header(id="settings-header")
+              h2.settings__text Скрыть элементы
+              img(src="../assets/img/arrow.svg", alt="Открыть меню показа элементов")
+            .settings__table-cols(id="settings-table-cols")
+              each index in table_titles
+                .settings__table-col
+                  input(clsass="settings__input" type="checkbox" id=`${table_id[i]}` value=`${table_id[i]}`)
+                  -i++
+                  label(table_id[i])=index
+
+          section.main__table-section
+            table.main__table
+              thead
+                tr
+                  -i = 0
+                  each index in table_titles
+                    th(onclick=`sortTable(${i})`)= index
+                    -i++
+              tbody(id="output")
+            .main__edit.edit(id='editForm')
+              fieldset
+                legend 
+                  h2 Редактировать ряд
+                  -i = 0
+                  each index in table_titles
+                    .edit__form
+                      label(input type="text")= index
+                      input(type="text" name="text" class="edit__input")
+                      -i++
+                  button.edit__save(onclick="saveChanges()") Сохранить изменения
+                  button.edit__save(onclick="closeForm()") Закрыть форму
+          section.main__arrows
+            img(class="main__arrow rotated-arrow" id="previous-page" src="../assets/img/arrow.svg", alt="Предыдущая страница")
+            .main__current-page(id="current-page")
+            img(class="main__arrow" id="next-page" src="../assets/img/arrow.svg", alt="Следующая страница")
+    script(src='assets/js/index.js')

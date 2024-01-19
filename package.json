@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.3",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssbeautify": "^3.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^5.1.0",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "rename": "^1.0.4",
+    "rigger": "^1.0.1",
+    "sass": "^1.64.2",
+    "uglify": "^0.1.5"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "typescript": "^5.3.3"
+  }
+}
